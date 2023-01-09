@@ -23,6 +23,8 @@ type Product {
   description: String!
   image: String!
   createdAt: String!
+  category:Category!
+  categoryId:ID!
 }
 
 input CreateProductInput {
@@ -39,4 +41,11 @@ input UpdateProductInput {
   description: String
   price: Int
   image: String
+}
+
+
+type Category{
+  id:ID!
+  name:String!
+  image:String!
 }
