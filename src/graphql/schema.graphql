@@ -1,0 +1,20 @@
+type Query {
+  hello: String!
+  hello2: String
+  person(name: String, age: Int): String
+  getBoolean: Boolean
+  getId: ID
+  getFloat: Float
+  getNumbers(numbers: [Int!]!): [Int]
+  products: Product
+}
+
+type Product {
+  id: ID!
+  name: String!
+  price: Float!
+  description: String!
+  image: String!
+  createdAt: String!
+}
+
