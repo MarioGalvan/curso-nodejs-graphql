@@ -6,7 +6,8 @@ type Query {
   getId: ID
   getFloat: Float
   getNumbers(numbers: [Int!]!): [Int]
-  products: Product
+  product(id:ID!): Product,
+  products:[Product]
 }
 
 type Product {
