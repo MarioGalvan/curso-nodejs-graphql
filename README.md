@@ -1,34 +1,44 @@
-# Install
+### Install
 
 ```sh
-npm install
+yarn install
 ```
 
 
-# Migrations
+### Migrations
 
 ```sh
-npm run migrations:run
+yarn run migrations:run
 ```
 
-# Run in dev mode
+### Run in dev mode
 
 ```sh
-npm run dev
+yarn run dev
 ```
 
-# Run in prod mode
+### Run in prod mode
 
 ```sh
-npm run start
+yarn run start
 ```
 
-# Connect to DB from Docker
-
+### Up Docker database
 ```sh
-docker-compose exec postgres bash
-psql -h localhost -d my_store -U nico
-\d+
-SELECT * FROM users;
-DELETE FROM users WHERE id=<id>;
+docker compose up
 ```
+
+### Technologies used
+
+  * Node js
+  * Sequelize
+  * Docker
+  * Postgres
+  * GraphQL
+  * Javascript
+  * Express
+  * Jwt
+  * NodeMailer
+  * bcrypt
+  * passport
+  
