@@ -1,3 +1,4 @@
+const userLogin = require('./auth.resolver');
 const {
   getProduct,
   getProducts,
@@ -15,7 +16,8 @@ const resolvers = {
   Mutation: {
     addProduct,
     deleteProduct,
-    updateProduct
+    updateProduct,
+    login:userLogin
   },
 };
 
