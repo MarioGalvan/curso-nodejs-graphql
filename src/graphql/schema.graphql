@@ -8,6 +8,7 @@ type Query {
   getNumbers(numbers: [Int!]!): [Int]
   product(id: ID!): Product
   products: [Product]
+  allcategorys:[Category]
 }
 
 type Mutation {
@@ -15,6 +16,8 @@ type Mutation {
   updateProduct(id: ID, dto: UpdateProductInput!): Product
   deleteProduct(id:ID):String
   login(email:String!, password:String!):AuthResponse
+  addCategory(name:String!, image:String!):Category
+  deleteCategory(id:ID):ID
 }
 
 type Product {
@@ -35,6 +38,11 @@ input CreateProductInput {
   price: Int!
   image: String!
   categoryId: ID!
+}
+
+input CreateCategoryInput{
+  name:String!
+  image:String!
 }
 
 input UpdateProductInput {
@@ -63,3 +71,4 @@ type User{
   rol: String
   createdAt: String!
 }
+
